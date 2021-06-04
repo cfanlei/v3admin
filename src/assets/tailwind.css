@@ -3,3 +3,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    input{
+        /*删除边框*/
+        outline: none;
+        border-bottom: 1px solid red;
+    }
+    button{
+        @apply bg-red-50 border-none rounded-md text-xs cfl-text-color hover:cfl-btn-hover;
+    }
+}
+@variants focus{
+    .cfl-btn-border{
+        @apply shadow-2xl bg-red-50;
+    }
+}@variants hover{
+    .cfl-btn-hover{
+        @apply cfl-bgd-color text-white;
+    }
+}
+
+@layer utilities {
+    /*自定义的主题色*/
+
+    .cfl-text-color{
+        color:#fc6d26
+    }
+    .cfl-textd-color{
+        color:#fca326
+    }
+    .cfl-bg-color{
+        background-color:#fc6d26
+    }
+    .cfl-bgd-color{
+        background-color:#fca326
+    }
+    .cfl-borderd-color{
+        color:#fca326
+    }
+    .cfl-border-color{
+        color:#fc6d26
+    }
+    /*自定义样式*/
+    .cfl-btn{
+        @apply w-full block  p-2 rounded-md border-none focus:cfl-btn-border box-border
+    }
+}

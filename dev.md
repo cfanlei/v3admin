@@ -58,3 +58,13 @@ fc6d26   //   主要风格 1
 fca326   //   2   1->2渐变
 ```
 
+### 4.vue生态安装
+
+```js
+npm i vue-router@4 vuex@next  axios -S
+
+//配置使用
+vue-router:
+
+```
+
