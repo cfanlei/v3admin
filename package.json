@@ -1,7 +1,13 @@
 {
   "name": "v3admin",
   "version": "0.1.0",
-  "private": true,
+  "description": "own admin",
+  "author": {
+    "email": "cfanlei@126.com",
+    "name": "cfanlei",
+    "url": "https://github.com/cfanlei/v3admin"
+  },
+  "license": "Apache 2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
