@@ -10,6 +10,7 @@
 master   最终分支
 test     测试分支
 dev      开发环境
+demo     删除测试
 ```
 
 # 进度说明
@@ -21,7 +22,7 @@ dev      开发环境
 # 技术栈
 
 ```js
-目前主要是以vue3作为基础，最新的前端技术栈eslint,babel,webpack等暂定
+目前主要是以vue3作为基础，最新的前端技术栈eslint,babel,webpack,ts等暂定
 后台服务器望以golang开发，个人开发--进度不能控制(本人很菜，请勿抱有希望)
 ```
 

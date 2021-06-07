@@ -40,11 +40,9 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  name: "Login",
-  data() {
-    return {};
-  },
-};
+<script lang="ts">
+import { defineComponent } from "vue";
+
+const Login = defineComponent({});
+export default Login;
 </script>

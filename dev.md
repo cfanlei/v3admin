@@ -68,3 +68,64 @@ vue-router:
 
 ```
 
+### 5.ts
+
+```js
+$ npm i @vue/cli-plugin-typescript typescript ts-loader -S //用于项目中支持ts
+```
+
+* tsconfig.json
+
+```js
+//vuecli官方推荐配置
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    // 这样就可以对 `this` 上的数据属性进行更严格的推断
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node"
+  }
+}
+```
+
+由于 ESLint 默认使用 [Espree](https://github.com/eslint/espree) 进行语法解析，无法识别 TypeScript 的一些语法，故我们需要安装 [`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)，替代掉默认的解析器，别忘了同时安装 `typescript`：
+
+```js
+$ npm install --save-dev @typescript-eslint/parser
+```
+
+接下来需要安装对应的插件 [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) 它作为 eslint 默认规则的补充，提供了一些额外的适用于 ts 语法的规则。
+
+```js
+$ npm install --save-dev @typescript-eslint/eslint-plugin
+```
+
+* eslint检查ts
+
+```js
+$ npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+
+需要将 eslint 的 parserOptions 中的 parser 设置为 @typescript-eslint/parser，
+在没有用 typescript 之前我们一般使用的是 babel-eslint。plugins 中需要加上 plugin:@typescript-eslint，
+extends 中则是使用 @typescript-eslint/recommended
+```
+
+* babel -ts
+
+```js
+/*
+* @babel/plugin-transform-typescript，它的作用就是把代码中所有的 typescript 语法全部去掉，所以打包非常快。
+*使用 @babel/plugin-transform-typescript 我们需要先去掉 Vue-Cli 中的 Webpack 中的 ts-loader 的配置
+*/
+$ npm i -D @babel/preset-typescript
+* 配置该插件于babel配置文件@babel/plugin-transform-typescript
+
+//vue.config.js 
+  chainWebpack: (config) => {
+    config.module.rule("ts").uses.delete("ts-loader");
+    config.module.rule("tsx").uses.delete("ts-loader");
+  },
+```
+

@@ -4,13 +4,13 @@
   </div>
 </template>
 
-<script>
-import Login from "./views/login";
-export default {
-  name: "App",
+<script lang="ts">
+import Login from "./views/login/index.vue";
+import { defineComponent } from "vue";
+const App = defineComponent({
   components: { Login },
-  setup() {},
-};
+});
+export default App;
 </script>
 
 <style scoped lang="scss"></style>
