@@ -42,7 +42,16 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-
-const Login = defineComponent({});
+import { MockData, MockString, MockNum, MockJson } from "../../mock";
+let mockString = new MockString();
+const Login = defineComponent({
+  created() {
+    console.log(new MockData().showList());
+    console.log(mockString.typeOne());
+    console.log(mockString.typeTwo());
+    console.log(new MockNum().type01());
+    console.log(new MockJson().type01());
+  },
+});
 export default Login;
 </script>

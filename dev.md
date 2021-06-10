@@ -129,3 +129,36 @@ $ npm i -D @babel/preset-typescript
   },
 ```
 
+### 6.mockjs
+
+```js
+npm install @types/mockjs -D
+//使用import { mock } from "mockjs";
+```
+
+* 使用
+
+```js
+// 属性名   name
+// 生成规则 rule
+// 属性值   value
+'name|rule':value
+//生成规则的七种形式
+'name|min-max': value
+'name|count': value
+'name|min-max.dmin-dmax': value
+'name|min-max.dcount': value
+'name|count.dmin-dmax': value
+'name|count.dcount': value
+'name|+step': value
+```
+
+* 属性值为字符串
+
+  ```JS
+  格式----'name|rule':string  
+  
+  1.'name|min-max':"hello"  //重复生命max-min个hello
+  ```
+
+  
