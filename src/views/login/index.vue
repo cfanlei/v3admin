@@ -30,7 +30,7 @@
                 />
               </div>
               <div class="w-4/5 flex justify-between mx-auto">
-                <button class="h-7 w-1/3">登录</button>
+                <button class="h-7 w-1/3" @click="login">登录</button>
                 <button class="h-7 w-1/3">注册</button>
               </div>
             </div>
@@ -51,6 +51,11 @@ const Login = defineComponent({
     console.log(mockString.typeTwo());
     console.log(new MockNum().type01());
     console.log(new MockJson().type01());
+  },
+  methods: {
+    login() {
+      this.$router.push({ path: "/home" });
+    },
   },
 });
 export default Login;

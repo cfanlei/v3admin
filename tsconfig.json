@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "target": "esnext",
     "module": "esnext",
     // 这样就可以对 `this` 上的数据属性进行更严格的推断
@@ -9,6 +13,7 @@
     "typeRoots": [
       "./types",
       "./node_modules/vue/types"
-    ]
+    ],
+    "allowSyntheticDefaultImports": true
   }
 }

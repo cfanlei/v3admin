@@ -10,12 +10,10 @@ module.exports = {
   ],
   globals: { Atomics: "readonly", SharedArrayBuffer: "readonly" },
   parserOptions: {
-    parser:"@typescript-eslint/parser",  /* 解析ts语法 */
+    parser: "@typescript-eslint/parser" /* 解析ts语法 */,
     ecmaVersion: 2018,
     sourceType: "module",
   },
   plugins: ["vue"],
-  rules: {
-
-  }
+  rules: {},
 };

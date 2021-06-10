@@ -1,15 +1,12 @@
 <template>
   <div>
-    <login></login>
+    <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
-import Login from "./views/login/index.vue";
 import { defineComponent } from "vue";
-const App = defineComponent({
-  components: { Login },
-});
+const App = defineComponent({});
 export default App;
 </script>
 

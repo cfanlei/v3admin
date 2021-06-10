@@ -1,9 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { mock, Random, toJSONSchema } from "mockjs";
+import { mock, toJSONSchema } from "mockjs";
 //生成字符串   "prpertyName|rule":value
 class MockString {
-  typeOne() {
+  typeOne(): any {
     return mock({
       "name|1-10": [
         {
@@ -12,7 +12,7 @@ class MockString {
       ],
     });
   }
-  typeTwo() {
+  typeTwo(): any {
     const i = Math.random() * 10;
     return mock({
       "price|10": [
@@ -25,7 +25,7 @@ class MockString {
 }
 //生成数字
 class MockNum {
-  type01() {
+  type01(): any {
     return mock({
       "count|": 0,
       email: "@email",
@@ -33,7 +33,7 @@ class MockNum {
   }
 }
 class MockJson {
-  type01() {
+  type01(): any {
     const template = {
       name: "cfanlei",
       "key|1-10": "★",
