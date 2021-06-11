@@ -1,5 +1,6 @@
 import topBar from "@/components/TopBar.vue";
 import main from "@/components/Main.vue";
+import leftBar from "@/components/LeftBar.vue";
 export const routes = [
   {
     path: "/login",
@@ -9,9 +10,10 @@ export const routes = [
   {
     path: "/home",
     name: "home",
-    component: {
-      topBar,
+    components: {
+      top: topBar,
       main,
+      left: leftBar,
     },
   },
 ];
